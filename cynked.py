@@ -3,7 +3,6 @@ import subprocess
 import os
 import glob
 import toml
-import glob
 import sys
 
 config_server = toml.loads(open("server.toml", "r").read())
