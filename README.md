@@ -60,3 +60,5 @@ This program will overwrite every file in the directory with the same name.
 # Notes
 Working on Adding MacOS and Windows Support.
 Working on making synchronizing possible across multiple systems.
+
+https://phoenixnap.com/kb/linux-ssh-security
