@@ -4,6 +4,8 @@ Quick and easy 2-way localized file synchronization
 
 Keep a directory of files synchronized across your devices. Use it as a local github to test your code on different comptuers. Keep a copy of your photos backed up. Send your video project files from your editing machine to your rendering machine.
 
+Copy a specified directory back and forth between 2 machines.
+
 # Dependencies
 Make sure you have Python3 installed on your machine.
 Install openssh on your machine:
