@@ -5,7 +5,7 @@ import glob
 import toml
 import sys
 
-config_server = toml.loads(open("server.toml", "r").read())
+config_remote = toml.loads(open("remote.toml", "r").read())
 config_home = toml.loads(open("home.toml", "r").read())
 
 try:
@@ -19,10 +19,10 @@ except:
 overwrite = True
 
 if pull:
-    subprocess.call(["ssh", config_server["user"] + "@" + config_server["ip"], "cd " + config_server["ks"] + "&& python3 cynked.py push"])
+    subprocess.call(["ssh", config_remote["user"] + "@" + config_remote["ip"], "cd " + config_remote["ks"] + "&& python3 cynked.py push"])
 elif push:
     for file in glob.glob(str(config_home["file"]) + "*.*"):
         print("Writing " + file[file.rindex("/") + 1:])
-        subprocess.call(["scp",file,config_server["user"] + "@" + config_server["ip"] + ":" + config_server["file"]])
+        subprocess.call(["scp",file,config_remote["user"] + "@" + config_remote["ip"] + ":" + config_remote["file"]])
 else:
     print("Error: Please enter a valid command in the command line (either push or pull)")
