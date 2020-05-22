@@ -10,7 +10,7 @@ Install openssh on your machine:
 
 ### Ubuntu:
 ```
-sudo apt install openssh-server
+	sudo apt install openssh-server
 ```
 
 # Setup
@@ -19,12 +19,12 @@ sudo apt install openssh-server
 Set up ssh keys between machines:
 1. Generate ssh key for first machine:
 ```
-  ssh-keygen -t rsa
+ 	ssh-keygen -t rsa
 ```
   Then press enter to set defaults as a password with ssh key will break the program.
 2. Transfer ssh key to other machine:
 ```
-  ssh-copy-id remote_host
+ 	ssh-copy-id remote_host
 ```
   Where the remote_host is the user@ip_address of the dersired machine.
 3. Log in via ssh
