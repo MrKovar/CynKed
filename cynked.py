@@ -1,4 +1,3 @@
-#mainSync.py
 import subprocess
 import os
 import glob
